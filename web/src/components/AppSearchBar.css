@@ -1,0 +1,16 @@
+.search-bar {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #cecece;
+  width: 30%;
+  height: 35px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.search-bar::placeholder {
+  color: #cecece;
+}
+.search-bar:focus {
+  border-bottom: 1px solid #3399ff;
+  transition: 1s;
+}
