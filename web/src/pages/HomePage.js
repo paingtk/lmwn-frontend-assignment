@@ -7,7 +7,6 @@ const fetchTrips = async (filter) => {
   const keyword = `?keyword="${filter}"`
   const res = await fetch('http://localhost:4000/api/trips' + keyword)
   const data = await res.json()
-  console.log('data', data)
   return data.trips
 }
 
@@ -33,7 +32,7 @@ export default function HomePage() {
       {trips.length ? (
         <Trip trips={trips} onTagClick={handleFilterChange} />
       ) : (
-        <div>No data to show!</div>
+        <div style={{ marginTop: '5rem' }}>No data to show!</div>
       )}
     </div>
   )

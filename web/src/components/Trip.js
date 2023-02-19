@@ -2,7 +2,6 @@ import React from 'react'
 import './Trip.css'
 
 export default function Trip(props) {
-  console.log('props', props)
   return (
     <div>
       {props.trips.map((trip) => (
