@@ -1,5 +1,23 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Step to run this project
+
+1. cd into the 'json-server' folder and run
+
+### `yarn start:en`
+
+2. cd into the 'api-gateway' folder and run
+
+### `node index.js`
+
+3. cd into the 'web' folder and run
+
+### `yarn`
+
+and then
+
+### `yarn start`
+
 ## Available Scripts
 
 In the project directory, you can run:

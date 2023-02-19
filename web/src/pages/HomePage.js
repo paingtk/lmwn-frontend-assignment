@@ -4,17 +4,11 @@ import Trip from '../components/Trip'
 
 // fetch API and filter data
 const fetchTrips = async (filter) => {
-  const res = await fetch('http://localhost:9000/trips')
+  const keyword = `?keyword="${filter}"`
+  const res = await fetch('http://localhost:4000/api/trips' + keyword)
   const data = await res.json()
-  const filteredData = filter
-    ? data.filter(
-        (d) =>
-          d.tags.includes(filter.charAt(0).toUpperCase() + filter.slice(1)) ||
-          d.title.toLowerCase().includes(filter) ||
-          d.description.toLowerCase().includes(filter)
-      )
-    : data
-  return filteredData
+  console.log('data', data)
+  return data.trips
 }
 
 export default function HomePage() {
